@@ -1,15 +1,23 @@
 <template>
   <div class="form">
-    <div class="form__label">{{label}}</div>
+    <div class="form__label">
+      {{ label }}
+    </div>
     <input
-    v-show="!currency"
+      v-show="!currency"
       type="text"
       class="input"
       :value="value"
       @input="updateSelf($event.target.value)"
     >
-    <FormInputNumber :value="value" v-if="currency" @input="updateSelf" />
-    <div class="form__message--error">{{error}}</div>
+    <FormInputNumber
+      v-if="currency"
+      :value="value"
+      @input="updateSelf"
+    />
+    <div class="form__message--error">
+      {{ error }}
+    </div>
   </div>
 </template>
 

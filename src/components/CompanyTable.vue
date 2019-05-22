@@ -2,18 +2,29 @@
   <table class="table">
     <thead>
       <tr>
-        <th @click="handleSort('id')">ID</th>
-        <th @click="handleSort('name')">Company</th>
-        <th @click="handleSort('countryName')">Country</th>
-        <th @click="handleSort('email')">Email</th>
+        <th @click="handleSort('id')">
+          ID
+        </th>
+        <th @click="handleSort('name')">
+          Company
+        </th>
+        <th @click="handleSort('countryName')">
+          Country
+        </th>
+        <th @click="handleSort('email')">
+          Email
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="company in companies" :key="company.id">
-        <td>{{company.id}}</td>
-        <td>{{company.name}}</td>
-        <td>{{company.countryName}}</td>
-        <td>{{company.email}}</td>
+      <tr
+        v-for="company in companies"
+        :key="company.id"
+      >
+        <td>{{ company.id }}</td>
+        <td>{{ company.name }}</td>
+        <td>{{ company.countryName }}</td>
+        <td>{{ company.email }}</td>
       </tr>
     </tbody>
   </table>

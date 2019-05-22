@@ -1,7 +1,12 @@
 <template>
   <div>
-    <input v-model="search" @blur="handleSearch" @input="handleSearch" placeholder="Search by Company">
-    <CompanyTable :companies="companies"/>
+    <input
+      v-model="search"
+      placeholder="Search by Company"
+      @blur="handleSearch"
+      @input="handleSearch"
+    >
+    <CompanyTable :companies="companies" />
   </div>
 </template>
 

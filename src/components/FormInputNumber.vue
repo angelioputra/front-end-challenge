@@ -9,7 +9,11 @@
       @blur="onBlurNumber"
     >
     <!--  Illusion -->
-    <input v-if="visible === true" v-model="amount" @focus="onFocusText">
+    <input
+      v-if="visible === true"
+      v-model="amount"
+      @focus="onFocusText"
+    >
   </div>
 </template>
 

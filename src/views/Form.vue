@@ -1,32 +1,54 @@
 <template>
   <div>
-    <FormInput label="Company Name" v-model="form.name" :error="error.name"/>
-    <FormInput label="Company Spend" v-model.number="form.spend" :error="error.spend" currency/>
     <FormInput
-      label="Minimum Spend"
+      v-model="form.name"
+      label="Company Name"
+      :error="error.name"
+    />
+    <FormInput
+      v-model.number="form.spend"
+      label="Company Spend"
+      :error="error.spend"
+      currency
+    />
+    <FormInput
       v-model.number="form.spendMin"
+      label="Minimum Spend"
       :error="error.spendMin"
       currency
     />
     <FormInput
-      label="Maximum Spend"
       v-model.number="form.spendMax"
+      label="Maximum Spend"
       :error="error.spendMax"
       currency
     />
 
-    <div class="dialog__mask" v-if="showDialog">
+    <div
+      v-if="showDialog"
+      class="dialog__mask"
+    >
       <div class="dialog__container">
-        <textarea class="input__textarea" rows="5" v-model="form.note"></textarea>
-        <button @click="showDialog = false">Close</button>
+        <textarea
+          v-model="form.note"
+          class="input__textarea"
+          rows="5"
+        />
+        <button @click="showDialog = false">
+          Close
+        </button>
       </div>
     </div>
 
     <div>
-      <button @click="showDialog = true">Note</button>
+      <button @click="showDialog = true">
+        Note
+      </button>
     </div>
 
-    <button @click="handleSubmit">Submit</button>
+    <button @click="handleSubmit">
+      Submit
+    </button>
   </div>
 </template>
 

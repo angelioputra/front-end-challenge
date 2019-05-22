@@ -1,9 +1,9 @@
 <template>
   <div>
-    <p>{{company.name}}</p>
-    <p>Spend : {{company.spend}}</p>
-    <p>Spend Range : {{company.spendMin}} - {{company.spendMax}}</p>
-    <p>{{company.note}}</p>
+    <p>{{ company.name }}</p>
+    <p>Spend : {{ company.spend }}</p>
+    <p>Spend Range : {{ company.spendMin }} - {{ company.spendMax }}</p>
+    <p>{{ company.note }}</p>
   </div>
 </template>
 
